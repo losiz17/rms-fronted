@@ -5,7 +5,6 @@ class search extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      // usstate: props.initState,
       req: { tagName: "" },
       res: []
     };
@@ -50,21 +49,8 @@ class search extends Component {
   }
 
   render() {
-    // var states = [
-    //     { code: "CA", name: "California" },
-    //     { code: "HI", name: "Hawaii" },
-    //     { code: "TX", name: "Texas" },
-    //     { code: "WA", name: "Washington" }
-    // ];
-
     return (
       <form className="form-inline" onSubmit={this.onSubmit}>
-        {/* <div>
-                    <select value={this.state.usstate} onChange={this.onChange}>
-                        {options}
-                    </select>
-                </div> */}
-
         <div className="form-group mx-sm-3 mb-2">
           <input
             className="form-control mr-sm-2"
@@ -81,13 +67,20 @@ class search extends Component {
             検索
           </button>
         </div>
+        {/* <div class="field has-addons">
+          <div class="control">
+            <input class="input" type="text" placeholder="Find a repository" />
+          </div>
+          <div class="control">
+            <a class="button is-info">Search</a>
+          </div>
+        </div> */}
 
         <ol>
           {this.state.res.map(function(index) {
             return <li key={index.id}>{index.tagName}</li>;
           })}
         </ol>
-        {/* {JSON.stringify(this.state.res)} */}
       </form>
     );
   }
