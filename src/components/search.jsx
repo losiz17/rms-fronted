@@ -1,5 +1,11 @@
 import React, { Component } from "react";
-import "../App.css";
+import "../style//search.css";
+import Form from "react-bootstrap/Form";
+import FormControl from "react-bootstrap/FormControl";
+import Button from "react-bootstrap/Button";
+import Card from "react-bootstrap/Card";
+import CardDeck from "react-bootstrap/CardDeck";
+import Container from "react-bootstrap/Container";
 
 class search extends Component {
   constructor(props) {
@@ -50,38 +56,82 @@ class search extends Component {
 
   render() {
     return (
-      <form className="form-inline" onSubmit={this.onSubmit}>
-        <div className="form-group mx-sm-3 mb-2">
-          <input
-            className="form-control mr-sm-2"
-            type="text"
-            placeholder="Search"
-            aria-label="Search"
-            value={this.state.desc}
-            onChange={this.onTextAreaChange}
-          />
-        </div>
+      <Container>
+        <div className="justify-content-md-center" id="search-all">
+          <Form inline id="search-box">
+            <FormControl
+              type="text"
+              placeholder="Search"
+              className="mr-sm-2"
+              value={this.state.desc}
+              onChange={this.onTextAreaChange}
+            />
+            <Button variant="outline-info" type="submit">
+              Search
+            </Button>
+          </Form>
+          <CardDeck>
+            <Card style={{ width: "18rem" }}>
+              <Card.Img variant="top" src="holder.js/100px180" />
+              <Card.Body>
+                <Card.Title>Card Title</Card.Title>
+                <Card.Text>
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </Card.Text>
+                <Button variant="info">Go somewhere</Button>
+              </Card.Body>
+            </Card>
 
-        <div>
-          <button className="btn btn-primary mb-2" type="submit">
-            検索
-          </button>
-        </div>
-        {/* <div class="field has-addons">
-          <div class="control">
-            <input class="input" type="text" placeholder="Find a repository" />
-          </div>
-          <div class="control">
-            <a class="button is-info">Search</a>
-          </div>
-        </div> */}
+            <Card style={{ width: "18rem" }}>
+              <Card.Img variant="top" src="holder.js/100px180" />
+              <Card.Body>
+                <Card.Title>Card Title</Card.Title>
+                <Card.Text>
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </Card.Text>
+                <Button variant="info">Go somewhere</Button>
+              </Card.Body>
+            </Card>
 
+            <Card style={{ width: "18rem" }}>
+              <Card.Img variant="top" src="holder.js/100px180" />
+              <Card.Body>
+                <Card.Title>Card Title</Card.Title>
+                <Card.Text>
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </Card.Text>
+                <Button variant="info">Go somewhere</Button>
+              </Card.Body>
+            </Card>
+
+            {this.state.res.map(index => {
+              return (
+                <Card style={{ width: "18rem" }}>
+                  <Card.Img variant="top" src="holder.js/100px180" />
+                  <Card.Body>
+                    <li key={index.id}>{index.tagName}</li>;
+                    <Card.Title>Card Title</Card.Title>
+                    <Card.Text>
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </Card.Text>
+                    <Button variant="info">Go somewhere</Button>
+                  </Card.Body>
+                </Card>
+              );
+            })}
+            {/* 
         <ol>
-          {this.state.res.map(function(index) {
+         {this.state.res.map(function(index) {
             return <li key={index.id}>{index.tagName}</li>;
           })}
-        </ol>
-      </form>
+        </ol> */}
+          </CardDeck>
+        </div>
+      </Container>
     );
   }
 }

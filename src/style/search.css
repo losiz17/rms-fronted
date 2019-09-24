@@ -1,0 +1,16 @@
+.form-inline {
+  display: block;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.card {
+  margin-right: auto;
+  margin-left: auto;
+  /* min-width: 220px;
+  max-width: 270px; */
+}
+
+#search-all {
+  text-align: center;
+}
