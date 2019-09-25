@@ -58,7 +58,7 @@ class search extends Component {
     return (
       <Container>
         <div className="justify-content-md-center" id="search-all">
-          <Form inline id="search-box">
+          <Form inline id="search-box" onSubmit={this.onSubmit}>
             <FormControl
               type="text"
               placeholder="Search"
@@ -71,7 +71,7 @@ class search extends Component {
             </Button>
           </Form>
           <CardDeck>
-            <Card style={{ width: "18rem" }}>
+            {/* <Card style={{ width: "18rem" }}>
               <Card.Img variant="top" src="holder.js/100px180" />
               <Card.Body>
                 <Card.Title>Card Title</Card.Title>
@@ -105,18 +105,19 @@ class search extends Component {
                 </Card.Text>
                 <Button variant="info">Go somewhere</Button>
               </Card.Body>
-            </Card>
+            </Card> */}
 
             {this.state.res.map(index => {
               return (
                 <Card style={{ width: "18rem" }}>
                   <Card.Img variant="top" src="holder.js/100px180" />
                   <Card.Body>
-                    <li key={index.id}>{index.tagName}</li>;
-                    <Card.Title>Card Title</Card.Title>
+                    {/* <li key={index.id}>{index.tagName}</li>; */}
+                    <Card.Title>{index.tagName}</Card.Title>
                     <Card.Text>
-                      Some quick example text to build on the card title and
-                      make up the bulk of the card's content.
+                      <p>{index.id}</p>
+                      <p>{index.created_at}</p>
+                      <p>{index.updated_at}</p>
                     </Card.Text>
                     <Button variant="info">Go somewhere</Button>
                   </Card.Body>

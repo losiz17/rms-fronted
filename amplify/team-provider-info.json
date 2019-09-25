@@ -1,0 +1,19 @@
+{
+    "devclient": {
+        "awscloudformation": {
+            "AuthRoleName": "a2019summerinternrmsr-devclient-20190924104358-authRole",
+            "UnauthRoleArn": "arn:aws:iam::057663277679:role/a2019summerinternrmsr-devclient-20190924104358-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::057663277679:role/a2019summerinternrmsr-devclient-20190924104358-authRole",
+            "Region": "ap-northeast-1",
+            "DeploymentBucketName": "a2019summerinternrmsr-devclient-20190924104358-deployment",
+            "UnauthRoleName": "a2019summerinternrmsr-devclient-20190924104358-unauthRole",
+            "StackName": "a2019summerinternrmsr-devclient-20190924104358",
+            "StackId": "arn:aws:cloudformation:ap-northeast-1:057663277679:stack/a2019summerinternrmsr-devclient-20190924104358/c71c36a0-de6c-11e9-b9fc-0a949e552770"
+        },
+        "categories": {
+            "auth": {
+                "cognitoc482e1ad": {}
+            }
+        }
+    }
+}

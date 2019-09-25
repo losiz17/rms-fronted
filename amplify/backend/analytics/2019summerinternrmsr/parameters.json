@@ -1,0 +1,20 @@
+{
+    "appName": "2019summerinternrmsr",
+    "roleName": "pinpointLambdaRolefac70cf9",
+    "cloudWatchPolicyName": "cloudWatchPolicyfac70cf9",
+    "pinpointPolicyName": "pinpointPolicyfac70cf9",
+    "authPolicyName": "pinpoint_amplify_fac70cf9",
+    "unauthPolicyName": "pinpoint_amplify_fac70cf9",
+    "authRoleName": {
+        "Ref": "AuthRoleName"
+    },
+    "unauthRoleName": {
+        "Ref": "UnauthRoleName"
+    },
+    "authRoleArn": {
+        "Fn::GetAtt": [
+            "AuthRole",
+            "Arn"
+        ]
+    }
+}

@@ -5,7 +5,7 @@ import FormControl from "react-bootstrap/FormControl";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import Container from "react-bootstrap/Container";
-import "../style//register.css";
+import "../style/register.css";
 
 const register = () => {
   return (

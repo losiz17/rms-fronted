@@ -7,8 +7,8 @@
 .card {
   margin-right: auto;
   margin-left: auto;
-  /* min-width: 220px;
-  max-width: 270px; */
+  min-width: 220px;
+  max-width: 270px;
 }
 
 #search-all {
