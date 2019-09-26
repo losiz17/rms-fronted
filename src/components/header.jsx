@@ -3,7 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Button from "react-bootstrap/Button";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import "../style//header.css";
+import "../style/header.css";
 
 import { BrowserRouter, Route, Link } from "react-router-dom";
 

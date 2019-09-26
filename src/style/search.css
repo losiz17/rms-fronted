@@ -14,3 +14,11 @@
 #search-all {
   text-align: center;
 }
+
+a {
+  color: #000;
+}
+a:hover {
+  color: #000;
+  text-decoration: none;
+}
