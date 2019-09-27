@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "../style//search.css";
+import "../style/search.css";
 import Form from "react-bootstrap/Form";
 import FormControl from "react-bootstrap/FormControl";
 import Button from "react-bootstrap/Button";
@@ -76,7 +76,7 @@ class search extends Component {
         console.log(this.state);
 
         this.props.history.push({
-          pathname: "/articles/1",
+          pathname: "/articles",
           state: { res2: this.state.res2 }
         });
       }
@@ -105,29 +105,14 @@ class search extends Component {
             </Button>
           </Form>
           <CardDeck>
-            <Card style={{ width: "18rem" }}>
-              <a onClick={() => this.click("index.tagName")}>
-                <Card.Img variant="top" src="holder.js/100px180" />
-                <Card.Body>
-                  <Card.Title>Card Title</Card.Title>
-                  <Card.Text>
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </Card.Text>
-                  <Button variant="info">Go somewhere</Button>
-                </Card.Body>
-              </a>
-            </Card>
-
             {this.state.res.map(index => {
               return (
                 <Card style={{ width: "18rem" }}>
                   <a onClick={() => this.click(index.word)}>
-                    <Card.Img variant="top" src="holder.js/100px180" />
                     <Card.Body>
                       <Card.Title>{index.word}</Card.Title>
                       <Card.Text>
-                        <p>{index.id}</p>
+                        <p>{index.count}件</p>
                       </Card.Text>
                       <Button variant="info">Go somewhere</Button>
                     </Card.Body>

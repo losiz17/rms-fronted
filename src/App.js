@@ -8,6 +8,7 @@ import Header from "./components/header.jsx";
 import Search from "./components/search.jsx";
 import Register from "./components/register.jsx";
 import Articles from "./components/articles.jsx";
+import Details from "./components/details.jsx";
 
 function App() {
   return (
@@ -18,7 +19,8 @@ function App() {
           <Route exact path="/" component={Search} />
           <Route path="/search" component={Search} />
           <Route path="/register" component={Register} />
-          <Route path="/articles/:id" component={Articles} />
+          <Route path="/articles" component={Articles} />
+          <Route path="/articles/details" component={Details} />
         </div>
 
         <header className="App-header"></header>
